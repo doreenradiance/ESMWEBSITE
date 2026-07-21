@@ -1,0 +1,152 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @include reset-margin;
+  @include fontStyle('Roboto', 16px, $color-text);
+  line-height: 1.6;
+  background: $color-bg;
+  @include font-smoothing;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  @include focus-ring;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+address {
+  font-style: normal;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  @include container;
+}
+
+.section {
+  padding: 4.5rem 0;
+
+  &--muted {
+    background: $color-bg-muted;
+  }
+
+  &--accent {
+    background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
+    color: #fff;
+  }
+
+  &__header {
+    margin-bottom: 2.5rem;
+
+    &--center {
+      text-align: center;
+      max-width: 36rem;
+      margin-inline: auto;
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__title {
+    @include reset-margin;
+    @include fontStyle('Roboto', clamp(1.75rem, 4vw, 2.25rem), $color-heading, bold);
+    margin-bottom: 0.75rem;
+
+    &--light {
+      color: #fff;
+    }
+  }
+
+  &__subtitle {
+    @include reset-margin;
+    @include fontStyle('Roboto', 16px, $color-text-muted);
+    line-height: 1.6;
+  }
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  @include fontStyle('Roboto', 14px, inherit, bold);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+
+  @include focus-ring;
+
+  &--primary {
+    background: $color-primary;
+    color: #fff;
+
+    &:hover {
+      background: $color-primary-dark;
+      text-decoration: none;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    border-color: $color-primary;
+    color: $color-primary;
+
+    &:hover {
+      background: rgba($color-primary, 0.08);
+      text-decoration: none;
+    }
+  }
+
+  &--light {
+    background: #fff;
+    color: $color-primary;
+
+    &:hover {
+      background: #f0faf8;
+      text-decoration: none;
+    }
+  }
+
+  &--outline-light {
+    background: transparent;
+    border-color: rgba(#fff, 0.8);
+    color: #fff;
+
+    &:hover {
+      background: rgba(#fff, 0.12);
+      text-decoration: none;
+    }
+  }
+}

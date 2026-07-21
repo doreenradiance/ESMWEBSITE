@@ -1,0 +1,105 @@
+{
+  "brand": "Fondation ESM",
+  "tagline": "Autonomiser, soutenir et motiver les orphelins.",
+  "slogan": "Fondation ESM ! Aidez-nous à les rendre heureux !",
+  "nav": {
+    "about": "À propos",
+    "programs": "Programmes",
+    "impact": "Impact",
+    "getInvolved": "S'impliquer",
+    "contact": "Contact",
+    "main": "Principal"
+  },
+  "donate": "Faire un don",
+  "language": "Langue",
+  "hero": {
+    "lead": "Nous tendons la main aux orphelins de la société avec la vision de transformer et d'impacter leur vie—en comblant le vide laissé par l'absence du soutien parental.",
+    "supportCta": "Soutenir notre action",
+    "programsCta": "Voir nos programmes"
+  },
+  "about": {
+    "title": "Qui sommes-nous",
+    "paragraph1": "La Fondation ESM est une organisation caritative qui <strong>Autonomise</strong>, <strong>Soutient</strong> et <strong>Motive</strong> les orphelins. Elle a été créée le 14 mai 2022 par sa fondatrice, Mme Doreen Anum Mensah.",
+    "paragraph2": "Vivre sans le soutien d'un parent est déjà assez difficile—mais nous cherchons à intervenir et à combler le vide laissé derrière. Avoir la passion d'aider et prendre l'initiative d'agir sont deux choses différentes.",
+    "paragraph3": "Notre but est de faire le pas audacieux d'aider, de près ou de loin, autant que possible, et d'atteindre de plus hauts sommets, passionnés par l'influence que nous voulons avoir sur la société.",
+    "foundedLabel": "Fondée",
+    "foundedText": "14 mai 2022",
+    "founderLabel": "Fondatrice",
+    "founderText": "Mme Doreen Anum Mensah",
+    "missionLabel": "Notre mission",
+    "missionTitle": "Notre mission",
+    "missionText": "Atteindre les orphelins de la société avec la vision de transformer et d'impacter leur vie.",
+    "visionTitle": "Notre vision",
+    "visionText": "Transformer et impacter la vie des orphelins pour qu'ils puissent envisager un avenir meilleur.",
+    "objectiveTitle": "Notre objectif",
+    "objectiveText": "Impacter la vie des orphelins en les motivant et en les aidant à acquérir des compétences de base et intensives pour améliorer leur vie."
+  },
+  "programs": {
+    "title": "Ce que nous faisons",
+    "subtitle": "Un soutien concret fondé sur l'attention, la motivation et des compétences qui aident les orphelins à construire un avenir plus solide.",
+    "items": {
+      "food": {
+        "title": "Soins et essentiels",
+        "description": "Répondre aux besoins urgents et offrir un soutien pratique pour que les orphelins se sentent vus, valorisés et accompagnés."
+      },
+      "youth": {
+        "title": "Compétences et formation",
+        "description": "Aider les orphelins à acquérir des compétences de base et intensives qui ouvrent des portes et améliorent leur vie."
+      },
+      "counselling": {
+        "title": "Motivation et mentorat",
+        "description": "Accompagner les jeunes avec encouragement, conseils et la conviction que leur avenir peut changer."
+      },
+      "outreach": {
+        "title": "Action communautaire",
+        "description": "Atteindre les orphelins dans la société et collaborer avec les communautés pour combler le vide laissé par la perte du soutien parental."
+      }
+    }
+  },
+  "impact": {
+    "title": "Notre impact",
+    "subtitle": "Chaque pas que nous faisons vise à rendre les orphelins plus heureux, plus forts et plus confiants.",
+    "values": {
+      "founded": "2022",
+      "focus": "Orphelins",
+      "skills": "Compétences",
+      "years": "4+"
+    },
+    "stats": {
+      "founded": "Année de création",
+      "focus": "Ceux que nous servons",
+      "skills": "Aider les orphelins à bâtir un avenir meilleur",
+      "years": "Années de service"
+    }
+  },
+  "getInvolved": {
+    "title": "S'impliquer",
+    "lead": "Donner, ce n'est pas seulement faire un don. C'est faire une différence. — Kathy Calvin",
+    "quote": "Si vous ne pouvez pas nourrir mille personnes, alors nourrissez-en une. — Mère Teresa",
+    "donateTitle": "Faire un don",
+    "donateText": "Faites un don—grand ou petit—pour nous aider à autonomiser, soutenir et motiver les orphelins.",
+    "donateCta": "Donner aujourd'hui",
+    "volunteerTitle": "Bénévolat",
+    "volunteerText": "Rejoignez-nous pour aider, de près ou de loin, autant que possible.",
+    "volunteerCta": "Devenir bénévole"
+  },
+  "contact": {
+    "title": "Nous contacter",
+    "intro": "Contactez-nous pour un partenariat, le bénévolat, un don ou pour savoir comment aider à les rendre heureux.",
+    "email": "E-mail",
+    "phone": "Téléphone",
+    "office": "Adresse",
+    "social": "Suivez-nous",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "tiktok": "TikTok",
+    "addressLine1": "Anyaa Odogonnor Street, G&G Cold Store",
+    "formName": "Nom",
+    "formEmail": "E-mail",
+    "formMessage": "Message",
+    "submit": "Envoyer le message"
+  },
+  "footer": {
+    "copyright": "© {{year}} Fondation ESM. Tous droits réservés."
+  }
+}

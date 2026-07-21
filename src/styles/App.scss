@@ -1,0 +1,473 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba($color-bg, 0.95);
+  border-bottom: 1px solid $color-border;
+  backdrop-filter: blur(8px);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+    flex-wrap: wrap;
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__logo {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: contain;
+  }
+
+  &__name {
+    @include fontStyle('Roboto', 14px, $color-heading, bold);
+  }
+
+  &__nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__list {
+    @include reset-margin;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
+
+    a {
+      @include fontStyle('Roboto', 14px, $color-text-muted, 500);
+      text-decoration: none;
+
+      &:hover {
+        color: $color-primary;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__cta {
+    flex-shrink: 0;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+
+  &__lang {
+    display: flex;
+    gap: 0.25rem;
+    padding: 0.2rem;
+    border-radius: 8px;
+    border: 1px solid $color-border;
+    background: $color-bg;
+  }
+
+  &__lang-btn {
+    border: none;
+    background: transparent;
+    padding: 0.35rem 0.55rem;
+    border-radius: 6px;
+    cursor: pointer;
+    @include fontStyle('Roboto', 12px, $color-text-muted, bold);
+
+    &--active {
+      background: $color-primary;
+      color: #fff;
+    }
+
+    @include focus-ring;
+  }
+
+  @media (max-width: 768px) {
+    &__nav {
+      order: 3;
+      flex-basis: 100%;
+      justify-content: flex-start;
+    }
+  }
+}
+
+.hero {
+  padding: 5rem 0 4.5rem;
+  background: linear-gradient(180deg, $color-bg-muted 0%, $color-bg 100%);
+
+  &__inner {
+    max-width: 42rem;
+  }
+
+  &__logo {
+    width: 5rem;
+    height: auto;
+    margin-bottom: 1.25rem;
+  }
+
+  &__eyebrow {
+    @include reset-margin;
+    @include fontStyle('Roboto', 14px, $color-primary, bold);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    @include reset-margin;
+    @include fontStyle('Roboto', clamp(2rem, 5vw, 3rem), $color-heading, bold);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+  }
+
+  &__lead {
+    @include reset-margin;
+    @include fontStyle('Roboto', 18px, $color-text-muted);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+.about {
+  &__grid {
+    display: grid;
+    gap: 2rem;
+    align-items: start;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1.4fr 1fr;
+    }
+  }
+
+  &__content p {
+    @include fontStyle('Roboto', 16px, $color-text);
+    margin: 0 0 1rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__meta {
+    @include reset-margin;
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+
+    @media (min-width: 480px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    div {
+      padding: 0.85rem 1rem;
+      border-left: 3px solid $color-primary;
+      background: $color-bg-muted;
+    }
+
+    dt {
+      @include fontStyle('Roboto', 12px, $color-text-muted, bold);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.25rem;
+    }
+
+    dd {
+      @include reset-margin;
+      @include fontStyle('Roboto', 15px, $color-heading, 500);
+    }
+  }
+
+  &__card {
+    padding: 1.75rem;
+    border-radius: 12px;
+    border: 1px solid $color-border;
+    background: $color-bg-muted;
+  }
+
+  &__card-title {
+    @include reset-margin;
+    @include fontStyle('Roboto', 18px, $color-heading, bold);
+    margin-bottom: 0.75rem;
+
+    &:not(:first-child) {
+      margin-top: 1.25rem;
+    }
+  }
+
+  &__card p {
+    @include reset-margin;
+    @include fontStyle('Roboto', 14px, $color-text-muted);
+    line-height: 1.6;
+  }
+}
+
+.programs {
+  &__grid {
+    @include reset-margin;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1.25rem;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: $color-bg;
+    border: 1px solid $color-border;
+    height: 100%;
+  }
+
+  &__card-title {
+    @include reset-margin;
+    @include fontStyle('Roboto', 18px, $color-heading, bold);
+    margin-bottom: 0.5rem;
+  }
+
+  &__card p {
+    @include reset-margin;
+    @include fontStyle('Roboto', 14px, $color-text-muted);
+    line-height: 1.6;
+  }
+}
+
+.impact {
+  &__stats {
+    @include reset-margin;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 900px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__stat {
+    @include flex-center;
+    gap: 0.35rem;
+    padding: 1.25rem;
+    border-radius: 12px;
+    border: 1px solid $color-border;
+  }
+
+  &__value {
+    @include fontStyle('Roboto', clamp(1.75rem, 4vw, 2.25rem), $color-primary, bold);
+  }
+
+  &__label {
+    @include fontStyle('Roboto', 14px, $color-text-muted);
+    max-width: 12rem;
+  }
+}
+
+.get-involved {
+  &__inner {
+    display: grid;
+    gap: 2rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1.2fr;
+      align-items: start;
+    }
+  }
+
+  &__content p {
+    @include reset-margin;
+    @include fontStyle('Roboto', 16px, rgba(#fff, 0.92));
+    line-height: 1.65;
+  }
+
+  &__quote {
+    margin-top: 1rem !important;
+    font-style: italic;
+    opacity: 0.95;
+  }
+
+  &__cards {
+    display: grid;
+    gap: 1rem;
+
+    @media (min-width: 520px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__card {
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: rgba(#fff, 0.1);
+    border: 1px solid rgba(#fff, 0.2);
+
+    h3 {
+      @include reset-margin;
+      @include fontStyle('Roboto', 18px, #fff, bold);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      @include reset-margin;
+      @include fontStyle('Roboto', 14px, rgba(#fff, 0.88));
+      margin-bottom: 1.25rem;
+      line-height: 1.55;
+    }
+  }
+}
+
+.contact {
+  &__grid {
+    display: grid;
+    gap: 2.5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__intro {
+    @include fontStyle('Roboto', 16px, $color-text-muted);
+    margin: 0 0 1.5rem;
+  }
+
+  &__details {
+    @include reset-margin;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  &__label {
+    display: block;
+    @include fontStyle('Roboto', 12px, $color-text-muted, bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.25rem;
+  }
+
+  &__details a {
+    @include fontStyle('Roboto', 16px, $color-heading, 500);
+  }
+
+  &__details address {
+    @include reset-margin;
+    @include fontStyle('Roboto', 16px, $color-heading, 500);
+    font-style: normal;
+  }
+
+  &__social {
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  &__form {
+    display: grid;
+    gap: 1rem;
+
+    label {
+      display: grid;
+      gap: 0.35rem;
+      @include fontStyle('Roboto', 14px, $color-heading, 500);
+    }
+
+    input,
+    textarea {
+      padding: 0.65rem 0.75rem;
+      border: 1px solid $color-border;
+      border-radius: 8px;
+      @include fontStyle('Roboto', 14px, $color-text);
+      font-family: inherit;
+
+      @include focus-ring;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 6rem;
+    }
+  }
+}
+
+.footer {
+  padding: 2.5rem 0;
+  background: $color-heading;
+  color: rgba(#fff, 0.85);
+  text-align: center;
+
+  &__inner {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  &__brand {
+    @include reset-margin;
+    @include fontStyle('Roboto', 16px, #fff, bold);
+  }
+
+  &__slogan {
+    @include reset-margin;
+    @include fontStyle('Roboto', 15px, #fff, 500);
+  }
+
+  &__tagline {
+    @include reset-margin;
+    @include fontStyle('Roboto', 14px, rgba(#fff, 0.75));
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.75rem;
+
+    a {
+      @include fontStyle('Roboto', 14px, rgba(#fff, 0.9), 500);
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  &__copy {
+    @include reset-margin;
+    @include fontStyle('Roboto', 12px, rgba(#fff, 0.55));
+    margin-top: 0.75rem;
+  }
+}
