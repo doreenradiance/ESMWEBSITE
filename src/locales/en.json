@@ -1,11 +1,12 @@
 {
   "brand": "ESM Foundation",
-  "tagline": "Empowering, supporting and motivating orphans.",
+  "tagline": "Empowering, supporting and motivating the vulnerable.",
   "slogan": "ESM Foundation! Help us make them happy!",
   "nav": {
     "about": "About",
     "programs": "Programs",
     "impact": "Impact",
+    "events": "Events",
     "getInvolved": "Get involved",
     "contact": "Contact",
     "main": "Main"
@@ -13,13 +14,13 @@
   "donate": "Donate",
   "language": "Language",
   "hero": {
-    "lead": "We reach out to orphans in society with the vision of transforming and impacting their lives—closing the gap left behind when a parent’s support is gone.",
+    "lead": "We reach out to the vulnerable in society with the vision of transforming and impacting their lives—closing the gap left behind when a parent’s support is gone.",
     "supportCta": "Support our work",
     "programsCta": "See our programs"
   },
   "about": {
     "title": "Who we are",
-    "paragraph1": "The ESM Foundation is a charity organization that <strong>Empowers</strong>, <strong>Supports</strong>, and <strong>Motivates</strong> orphans. We were established on the 14th of May 2022 by our founder, Ms. Doreen Anum Mensah.",
+    "paragraph1": "The ESM Foundation is a charity organization that <strong>Empowers</strong>, <strong>Supports</strong>, and <strong>Motivates</strong> the vulnerable. We were established on the 14th of May 2022 by our founder, Ms. Doreen Anum Mensah.",
     "paragraph2": "The thoughts and reality of living without the support system of a parent is hard enough—but we seek to step in and close the gap left behind. The passion to help and taking the initiative to impact are two different things.",
     "paragraph3": "Our goal is to take the bold step to help in every little or big way we possibly can, and to attain higher heights as we are passionate about how we want to influence society.",
     "foundedLabel": "Founded",
@@ -28,23 +29,23 @@
     "founderText": "Ms. Doreen Anum Mensah",
     "missionLabel": "Our mission",
     "missionTitle": "Our mission",
-    "missionText": "To reach out to orphans in society with the vision of transforming and impacting their lives.",
+    "missionText": "To reach out to the vulnerable  in society with the vision of transforming and impacting their lives.",
     "visionTitle": "Our vision",
-    "visionText": "Transforming and impacting the lives of orphans so they can look toward a better tomorrow.",
+    "visionText": "Transforming and impacting the lives of the vulnerable so they can look toward a better tomorrow.",
     "objectiveTitle": "Our objective",
-    "objectiveText": "To impact the lives of orphans by motivating and helping them acquire basic and intensive skills to better their lives."
+    "objectiveText": "To impact the lives of the vulnerable by motivating and helping them acquire basic and intensive skills to better their lives."
   },
   "programs": {
     "title": "What we do",
-    "subtitle": "Practical support rooted in care, motivation, and skills that help orphans build a stronger future.",
+    "subtitle": "Practical support rooted in care, motivation, and skills that help the vulnerable build a stronger future.",
     "items": {
       "food": {
         "title": "Care & essentials",
-        "description": "Meeting urgent needs and offering practical support so orphans feel seen, valued, and cared for."
+        "description": "Meeting urgent needs and offering practical support so the vulnerable feel seen, valued, and cared for."
       },
       "youth": {
         "title": "Skills & training",
-        "description": "Helping orphans acquire basic and intensive skills that open doors and better their lives."
+        "description": "Helping the vulnerable  acquire basic and intensive skills that open doors and better their lives."
       },
       "counselling": {
         "title": "Motivation & mentorship",
@@ -52,32 +53,38 @@
       },
       "outreach": {
         "title": "Community outreach",
-        "description": "Reaching orphans in society and partnering with communities to close the gap left by lost parental support."
+        "description": "Reaching the vulnerable in society and partnering with communities to close the gap left by lost parental support."
       }
     }
   },
   "impact": {
     "title": "Our impact",
-    "subtitle": "Every step we take is aimed at making orphans happier, stronger, and more hopeful.",
+    "subtitle": "Every step we take is aimed at making the vulnerable happier, stronger, and more hopeful.",
     "values": {
       "founded": "2022",
-      "focus": "Orphans",
+      "focus": "The vulnerable",
       "skills": "Skills",
       "years": "4+"
     },
     "stats": {
       "founded": "Year the foundation began",
       "focus": "Who we exist to serve",
-      "skills": "Helping orphans build a better future",
+      "skills": "Helping the vulnerable build a better future",
       "years": "Years of service"
     }
+  },
+  "events": {
+    "title": "Past events",
+    "subtitle": "Photos from our outreach, projects, and time with the people we serve.",
+    "empty": "Photos from our events and projects will appear here.",
+    "photoFallback": "Event photo"
   },
   "getInvolved": {
     "title": "Get involved",
     "lead": "Giving is not just about making a donation. It is about making a difference. — Kathy Calvin",
     "quote": "If you can’t feed a thousand people, then feed one. — Mother Teresa",
     "donateTitle": "Donate",
-    "donateText": "Make a gift—big or small—to help us empower, support, and motivate orphans.",
+    "donateText": "Make a gift—big or small—to help us empower, support, and motivate the vulnerable.",
     "donateCta": "Give today",
     "volunteerTitle": "Volunteer",
     "volunteerText": "Join us in taking the bold step to help in every little or big way we possibly can.",

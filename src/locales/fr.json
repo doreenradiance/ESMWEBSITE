@@ -6,6 +6,7 @@
     "about": "À propos",
     "programs": "Programmes",
     "impact": "Impact",
+    "events": "Événements",
     "getInvolved": "S'impliquer",
     "contact": "Contact",
     "main": "Principal"
@@ -71,6 +72,12 @@
       "skills": "Aider les orphelins à bâtir un avenir meilleur",
       "years": "Années de service"
     }
+  },
+  "events": {
+    "title": "Événements passés",
+    "subtitle": "Des photos de nos actions, projets et moments passés avec les personnes que nous accompagnons.",
+    "empty": "Les photos de nos événements et projets apparaîtront ici.",
+    "photoFallback": "Photo d'événement"
   },
   "getInvolved": {
     "title": "S'impliquer",

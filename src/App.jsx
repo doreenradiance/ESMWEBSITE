@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Programs from './components/Programs'
 import Impact from './components/Impact'
+import Events from './components/Events'
 import GetInvolved from './components/GetInvolved'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -17,6 +18,7 @@ function App() {
         <About />
         <Programs />
         <Impact />
+        <Events />
         <GetInvolved />
         <Contact />
       </main>

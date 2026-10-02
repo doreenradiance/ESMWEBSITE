@@ -5,6 +5,7 @@ const navLinks = [
   { href: '#about', key: 'nav.about' },
   { href: '#programs', key: 'nav.programs' },
   { href: '#impact', key: 'nav.impact' },
+  { href: '#events', key: 'nav.events' },
   { href: '#get-involved', key: 'nav.getInvolved' },
   { href: '#contact', key: 'nav.contact' },
 ]

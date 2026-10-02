@@ -296,6 +296,75 @@
   }
 }
 
+.events {
+  &__grid {
+    @include reset-margin;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 1.25rem;
+
+    @media (min-width: 640px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 900px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    background: $color-bg;
+    border: 1px solid $color-border;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: $color-border;
+  }
+
+  &__body {
+    padding: 1.15rem 1.25rem 1.35rem;
+  }
+
+  &__date {
+    @include reset-margin;
+    @include fontStyle('Roboto', 12px, $color-primary, bold);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.35rem;
+  }
+
+  &__title {
+    @include reset-margin;
+    @include fontStyle('Roboto', 18px, $color-heading, bold);
+  }
+
+  &__text {
+    @include reset-margin;
+    @include fontStyle('Roboto', 14px, $color-text-muted);
+    line-height: 1.6;
+    margin-top: 0.4rem;
+  }
+
+  &__empty {
+    @include reset-margin;
+    margin-inline: auto;
+    max-width: 36rem;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border: 1px dashed $color-border;
+    border-radius: 12px;
+    background: $color-bg;
+    @include fontStyle('Roboto', 16px, $color-text-muted);
+  }
+}
+
 .get-involved {
   &__inner {
     display: grid;
