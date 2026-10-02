@@ -1,7 +1,59 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+
+const RECIPIENT = 'esm.foundation1@gmail.com'
 
 function Contact() {
   const { t } = useTranslation()
+  const [status, setStatus] = useState('idle')
+
+  const handleSubmit = async (event) => {
+    event.preventDefault()
+    const form = event.currentTarget
+    const data = new FormData(form)
+
+    if (String(data.get('_honey') || '').trim()) {
+      form.reset()
+      setStatus('sent')
+      return
+    }
+
+    setStatus('sending')
+
+    try {
+      const response = await fetch(
+        `https://formsubmit.co/ajax/${RECIPIENT}`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json',
+          },
+          body: JSON.stringify({
+            name: data.get('name'),
+            email: data.get('email'),
+            message: data.get('message'),
+            _replyto: data.get('email'),
+            _subject: 'Message from the ESM Foundation website',
+            _captcha: 'false',
+            _template: 'table',
+          }),
+        },
+      )
+      const result = await response.json().catch(() => null)
+      const accepted = result?.success === true || result?.success === 'true'
+
+      if (!response.ok || !accepted) {
+        setStatus('error')
+        return
+      }
+
+      form.reset()
+      setStatus('sent')
+    } catch {
+      setStatus('error')
+    }
+  }
 
   return (
     <section className="section contact" id="contact">
@@ -12,7 +64,7 @@ function Contact() {
           <ul className="contact__details">
             <li>
               <span className="contact__label">{t('contact.email')}</span>
-              <a href="mailto:esm.foundation1@gmail.com">esm.foundation1@gmail.com</a>
+              <a href={`mailto:${RECIPIENT}`}>{RECIPIENT}</a>
             </li>
             <li>
               <span className="contact__label">{t('contact.phone')}</span>
@@ -50,7 +102,15 @@ function Contact() {
             </li>
           </ul>
         </div>
-        <form className="contact__form" onSubmit={(e) => e.preventDefault()}>
+        <form className="contact__form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="_honey"
+            className="contact__honey"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+          />
           <label>
             {t('contact.formName')}
             <input type="text" name="name" autoComplete="name" required />
@@ -63,9 +123,23 @@ function Contact() {
             {t('contact.formMessage')}
             <textarea name="message" rows={4} required />
           </label>
-          <button type="submit" className="btn btn--primary">
-            {t('contact.submit')}
+          <button
+            type="submit"
+            className="btn btn--primary"
+            disabled={status === 'sending'}
+          >
+            {status === 'sending' ? t('contact.sending') : t('contact.submit')}
           </button>
+          {status === 'sent' ? (
+            <p className="contact__status" role="status">
+              {t('contact.sent', { email: RECIPIENT })}
+            </p>
+          ) : null}
+          {status === 'error' ? (
+            <p className="contact__status contact__status--error" role="alert">
+              {t('contact.error')}
+            </p>
+          ) : null}
         </form>
       </div>
     </section>

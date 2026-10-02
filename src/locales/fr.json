@@ -104,7 +104,10 @@
     "formName": "Nom",
     "formEmail": "E-mail",
     "formMessage": "Message",
-    "submit": "Envoyer le message"
+    "submit": "Envoyer le message",
+    "sending": "Envoi…",
+    "sent": "Votre message a été envoyé à {{email}}.",
+    "error": "Nous n'avons pas pu envoyer votre message. Veuillez réessayer."
   },
   "footer": {
     "copyright": "© {{year}} Fondation ESM. Tous droits réservés."

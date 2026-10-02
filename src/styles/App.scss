@@ -185,7 +185,7 @@
 
     div {
       padding: 0.85rem 1rem;
-      border-left: 3px solid $color-primary;
+      border-left: 3px solid $color-accent;
       background: $color-bg-muted;
     }
 
@@ -465,6 +465,7 @@
   }
 
   &__form {
+    position: relative;
     display: grid;
     gap: 1rem;
 
@@ -488,6 +489,28 @@
     textarea {
       resize: vertical;
       min-height: 6rem;
+    }
+
+    button:disabled {
+      opacity: 0.7;
+      cursor: wait;
+    }
+  }
+
+  &__honey {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  &__status {
+    @include reset-margin;
+    @include fontStyle('Roboto', 14px, $color-primary, 500);
+
+    &--error {
+      color: #9b2c2c;
     }
   }
 }
